@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Accueil from './components/Accueil/Accueil';
+import FormulaireParticipants from './components/FormulaireParticipants/FormulaireParticipants';
+import SelectionCategories from './components/SelectionCategories/SelectionCategories';
+import CompteurGages from './components/CompteurGages/CompteurGages';
+import SlideGage from './components/SlideGage/SlideGage';
 import './App.css';
 
 function App() {
+  const [participants, setParticipants] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [gagesRestants, setGagesRestants] = useState(0);
+
+  // Votre logique pour gérer les participants, les catégories et les gages
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Accueil />
+      <FormulaireParticipants
+        participants={participants}
+        setParticipants={setParticipants}
+      />
+      <SelectionCategories
+        categories={categories}
+        setCategories={setCategories}
+      />
+      <CompteurGages gagesRestants={gagesRestants} />
+      <SlideGage
+        participants={participants}
+        categories={categories}
+        setGagesRestants={setGagesRestants}
+      />
     </div>
   );
 }
