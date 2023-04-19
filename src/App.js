@@ -8,7 +8,7 @@ import {
 import Accueil from './components/Accueil/Accueil';
 import FormulaireParticipants from './components/FormulaireParticipants/FormulaireParticipants';
 import SelectionCategories from './components/SelectionCategories/SelectionCategories';
-import CompteurGages from './components/CompteurGages/CompteurGages';
+import CompteurGage from './components/CompteurGages/CompteurGages';
 import SlideGage from './components/SlideGage/SlideGage';
 import { filtrerEtMelangerGages } from './gages';
 import './App.css';
@@ -16,9 +16,9 @@ import './App.css';
 function App() {
   const [participants, setParticipants] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [gagesRestants, setGagesRestants] = useState(0);
   const [currentGageIndex, setCurrentGageIndex] = useState(0);
-  const [gages, setGages] = useState([]); // Ajoutez cette ligne
+  const [gages, setGages] = useState([]);
+  const [tour, setTour] = useState(1);
 
   const MainApp = () => {
     const navigate = useNavigate();
@@ -32,7 +32,6 @@ function App() {
     };
 
     const onFinishCategories = () => {
-      // Logique pour démarrer le jeu avec les participants et les catégories sélectionnées
 
       // Filtrez et mélangez les gages en fonction des catégories sélectionnées
       const gagesFiltres = filtrerEtMelangerGages(categories);
@@ -46,11 +45,13 @@ function App() {
 
     const onNextGage = () => {
       setCurrentGageIndex(currentGageIndex + 1);
+      setTour(tour + 1);
     };
     
     const onPreviousGage = () => {
       if (currentGageIndex > 0) {
         setCurrentGageIndex(currentGageIndex - 1);
+        setTour(tour - 1);
       }
     };
 
@@ -78,13 +79,17 @@ function App() {
               />
             }
           />
-          <Route path="/jeu"
+          <Route
+            path="/jeu"
             element={
-              <SlideGage
-                gage={gages[currentGageIndex]}
-                onNextGage={onNextGage}
-                onPreviousGage={onPreviousGage}
-              />
+              <div>
+                <CompteurGage tour={tour} />
+                <SlideGage
+                  gage={gages[currentGageIndex]}
+                  onNextGage={onNextGage}
+                  onPreviousGage={onPreviousGage}
+                />
+              </div>
             }
           />
         </Routes>
