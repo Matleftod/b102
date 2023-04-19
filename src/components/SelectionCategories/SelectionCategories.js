@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './SelectionCategories.css';
 
 const SelectionCategories = ({ categories, setCategories, onFinishCategories }) => {
-  const allCategories = ['Classique', 'Hard', 'Débile'];
+  const allCategories = ['classique', 'hard', 'debile'];
 
   const toggleCategory = (category) => {
     if (categories.includes(category)) {

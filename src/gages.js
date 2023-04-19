@@ -11,14 +11,22 @@ const gagesParCategorie = {
 };
 
 const filtrerEtMelangerGages = (categoriesSelectionnees) => {
-  const gagesFiltres = categoriesSelectionnees.flatMap(
-    (categorie) => gagesParCategorie[categorie]
-  );
 
+    console.log('Catégories sélectionnées:', categoriesSelectionnees);
+
+    // Rassemblez les gages des catégories sélectionnées
+    const gagesFiltres = categoriesSelectionnees.flatMap(
+        (categorie) => gagesParCategorie[categorie]
+    );
+
+    console.log('Gages filtrés:', gagesFiltres);
   // Mélangez les gages filtrés
   const gagesMelanges = melangerGages(gagesFiltres);
 
-  return gagesMelanges;
+  // Sélectionnez les 30 premiers gages mélangés
+  const gagesSelectionnes = gagesMelanges.slice(0, 50);
+
+  return gagesSelectionnes;
 };
 
 const melangerGages = (gages) => {
