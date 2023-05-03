@@ -57,6 +57,9 @@ function App() {
 
     return (
       <div className="App">
+        <div class="bg">
+          <div class="gradient"></div>
+        </div>
         <Routes>
           <Route path="/" element={<Accueil onStartGame={onStartGame} />} />
           <Route
