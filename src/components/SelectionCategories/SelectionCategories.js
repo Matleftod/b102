@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import './SelectionCategories.css';
 
-const SelectionCategories = ({ categories, setCategories, onFinishCategories }) => {
+const SelectionCategories = ({ onFinishCategories }) => {
+  const categories = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+
   const allCategories = ['classique', 'hard', 'debile'];
 
   const toggleCategory = (category) => {
     if (categories.includes(category)) {
-      setCategories(categories.filter((cat) => cat !== category));
+      dispatch({ type: 'REMOVE_CATEGORY', payload: category });
     } else {
-      setCategories([...categories, category]);
+      dispatch({ type: 'ADD_CATEGORY', payload: category });
     }
+  };
+
+  const handleFinishCategories = () => {
+    onFinishCategories(categories);
   };
 
   return (
@@ -27,7 +35,7 @@ const SelectionCategories = ({ categories, setCategories, onFinishCategories }) 
           </button>
         ))}
       </div>
-      <button onClick={onFinishCategories} className="finish-categories-button">
+      <button onClick={handleFinishCategories} className="finish-categories-button">
         Terminer
       </button>
     </div>
@@ -35,8 +43,6 @@ const SelectionCategories = ({ categories, setCategories, onFinishCategories }) 
 };
 
 SelectionCategories.propTypes = {
-  categories: PropTypes.array.isRequired,
-  setCategories: PropTypes.func.isRequired,
   onFinishCategories: PropTypes.func.isRequired,
 };
 

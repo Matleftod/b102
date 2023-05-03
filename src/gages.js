@@ -12,14 +12,19 @@ const gagesParCategorie = {
 
 const filtrerEtMelangerGages = (categoriesSelectionnees) => {
 
-    console.log('Catégories sélectionnées:', categoriesSelectionnees);
+  if (!Array.isArray(categoriesSelectionnees)) {
+    console.error('categoriesSelectionnees doit être un tableau');
+    return [];
+  }
+
+    //console.log('Catégories sélectionnées:', categoriesSelectionnees);
 
     // Rassemblez les gages des catégories sélectionnées
     const gagesFiltres = categoriesSelectionnees.flatMap(
         (categorie) => gagesParCategorie[categorie]
     );
 
-    console.log('Gages filtrés:', gagesFiltres);
+    //console.log('Gages filtrés:', gagesFiltres);
   // Mélangez les gages filtrés
   const gagesMelanges = melangerGages(gagesFiltres);
 

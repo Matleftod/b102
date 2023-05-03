@@ -1,13 +1,15 @@
 [
     {
-      "text": "Faire un salto",
+      "text": "Tout le monde boit 2 gorgées !",
       "categorie": "debile",
-      "niveau": 1
+      "niveau": 1,
+      "player": false
     },
     {
-      "text": "manger du ketchup",
+      "text": "$ doit manger du ketchup",
       "categorie": "debile",
-      "niveau": 1
+      "niveau": 1,
+      "player": true
     }
 ]
   

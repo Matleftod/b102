@@ -1,13 +1,15 @@
 [
     {
-      "text": "Faire 10 pompes",
+      "text": "$ doit faire 10 pompes",
       "categorie": "classique",
-      "niveau": 1
+      "niveau": 1,
+      "player": true
     },
     {
-      "text": "Imiter une vache",
+      "text": "$ doit imiter une vache",
       "categorie": "classique",
-      "niveau": 1
+      "niveau": 1,
+      "player": true
     }
 ]
   

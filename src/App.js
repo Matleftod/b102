@@ -5,7 +5,7 @@ import {
   Routes,
   useNavigate,
 } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'; // Importez useSelector et useDispatch
+import { useSelector, useDispatch } from 'react-redux';
 import Accueil from './components/Accueil/Accueil';
 import FormulaireParticipants from './components/FormulaireParticipants/FormulaireParticipants';
 import SelectionCategories from './components/SelectionCategories/SelectionCategories';
@@ -15,12 +15,11 @@ import { filtrerEtMelangerGages } from './gages';
 import './App.css';
 
 function App() {
-  const [participants, setParticipants] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [currentGageIndex, setCurrentGageIndex] = useState(0);
   const [tour, setTour] = useState(1);
 
-  const gages = useSelector((state) => state.gages); 
+  const gages = useSelector((state) => state.gages);
+  const categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
   const MainApp = () => {
@@ -31,20 +30,13 @@ function App() {
     };
 
     const onFinishParticipants = () => {
-      // Stockez les participants dans le store
-      dispatch({ type: 'SET_PARTICIPANTS', payload: participants });
-
       navigate('/selection-categories');
     };
 
-    const onFinishCategories = () => {
-      // Filtrez et mélangez les gages en fonction des catégories sélectionnées
-      const gagesFiltres = filtrerEtMelangerGages(categories);
-
-      // Stockez les gages filtrés dans le store
+    const onFinishCategories = (selectedCategories) => {
+      console.log(selectedCategories)
+      const gagesFiltres = filtrerEtMelangerGages(selectedCategories);
       dispatch({ type: 'SET_GAGES', payload: gagesFiltres });
-
-      // Naviguez vers l'écran du jeu
       navigate('/jeu');
     };
 
@@ -52,7 +44,7 @@ function App() {
       setCurrentGageIndex(currentGageIndex + 1);
       setTour(tour + 1);
     };
-    
+
     const onPreviousGage = () => {
       if (currentGageIndex > 0) {
         setCurrentGageIndex(currentGageIndex - 1);
@@ -71,8 +63,6 @@ function App() {
             path="/formulaire-participants"
             element={
               <FormulaireParticipants
-                participants={participants}
-                setParticipants={setParticipants}
                 onFinishParticipants={onFinishParticipants}
               />
             }
@@ -81,8 +71,6 @@ function App() {
             path="/selection-categories"
             element={
               <SelectionCategories
-                categories={categories}
-                setCategories={setCategories}
                 onFinishCategories={onFinishCategories}
               />
             }

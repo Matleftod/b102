@@ -1,13 +1,15 @@
 [
     {
-      "text": "fait un bisou",
+      "text": "$ embrasse où tu veux $",
       "categorie": "hard",
-      "niveau": 1
+      "niveau": 1,
+      "player": true
     },
     {
-      "text": "sort un bzez wsh",
+      "text": "$ sort un bzez wsh",
       "categorie": "hard",
-      "niveau": 1
+      "niveau": 1,
+      "player": true
     }
 ]
   
