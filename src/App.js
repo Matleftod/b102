@@ -5,6 +5,7 @@ import {
   Routes,
   useNavigate,
 } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'; // Importez useSelector et useDispatch
 import Accueil from './components/Accueil/Accueil';
 import FormulaireParticipants from './components/FormulaireParticipants/FormulaireParticipants';
 import SelectionCategories from './components/SelectionCategories/SelectionCategories';
@@ -17,8 +18,10 @@ function App() {
   const [participants, setParticipants] = useState([]);
   const [categories, setCategories] = useState([]);
   const [currentGageIndex, setCurrentGageIndex] = useState(0);
-  const [gages, setGages] = useState([]);
   const [tour, setTour] = useState(1);
+
+  const gages = useSelector((state) => state.gages); 
+  const dispatch = useDispatch();
 
   const MainApp = () => {
     const navigate = useNavigate();
@@ -28,16 +31,18 @@ function App() {
     };
 
     const onFinishParticipants = () => {
+      // Stockez les participants dans le store
+      dispatch({ type: 'SET_PARTICIPANTS', payload: participants });
+
       navigate('/selection-categories');
     };
 
     const onFinishCategories = () => {
-
       // Filtrez et mélangez les gages en fonction des catégories sélectionnées
       const gagesFiltres = filtrerEtMelangerGages(categories);
 
-      // Stockez les gages filtrés dans l'état
-      setGages(gagesFiltres);
+      // Stockez les gages filtrés dans le store
+      dispatch({ type: 'SET_GAGES', payload: gagesFiltres });
 
       // Naviguez vers l'écran du jeu
       navigate('/jeu');

@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux'; // Importez useDispatch et useSelector depuis react-redux
+import { setParticipants } from '../../store/actions';
 import './FormulaireParticipants.css';
 
-const FormulaireParticipants = ({ participants, setParticipants, onFinishParticipants }) => {
+const FormulaireParticipants = ({ onFinishParticipants }) => {
   const [participantName, setParticipantName] = useState('');
+  const dispatch = useDispatch(); // Utilisez le hook useDispatch
+  const participants = useSelector((state) => state.participants); // Utilisez le hook useSelector
 
   const handleChange = (event) => {
     setParticipantName(event.target.value);
@@ -12,7 +16,7 @@ const FormulaireParticipants = ({ participants, setParticipants, onFinishPartici
   const handleSubmit = (event) => {
     event.preventDefault();
     if (participantName.trim()) {
-      setParticipants([...participants, participantName.trim()]);
+      dispatch(setParticipants([...participants, participantName.trim()]));
       setParticipantName('');
     }
   };
@@ -42,8 +46,6 @@ const FormulaireParticipants = ({ participants, setParticipants, onFinishPartici
 };
 
 FormulaireParticipants.propTypes = {
-  participants: PropTypes.array.isRequired,
-  setParticipants: PropTypes.func.isRequired,
   onFinishParticipants: PropTypes.func.isRequired,
 };
 
