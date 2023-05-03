@@ -6,6 +6,7 @@ import './SelectionCategories.css';
 const SelectionCategories = ({ onFinishCategories }) => {
   const categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
+  const participants = useSelector((state) => state.participants);
 
   const allCategories = ['classique', 'hard', 'debile'];
 
@@ -18,7 +19,8 @@ const SelectionCategories = ({ onFinishCategories }) => {
   };
 
   const handleFinishCategories = () => {
-    onFinishCategories(categories);
+    // Passez participants en tant qu'argument à onFinishCategories
+    onFinishCategories(categories, participants);
   };
 
   return (

@@ -11,7 +11,7 @@ import FormulaireParticipants from './components/FormulaireParticipants/Formulai
 import SelectionCategories from './components/SelectionCategories/SelectionCategories';
 import CompteurGage from './components/CompteurGages/CompteurGages';
 import SlideGage from './components/SlideGage/SlideGage';
-import { filtrerEtMelangerGages } from './gages';
+import { filtrerEtMelangerGages, getGageTextWithParticipants } from './gages';
 import './App.css';
 
 function App() {
@@ -19,11 +19,11 @@ function App() {
   const [tour, setTour] = useState(1);
 
   const gages = useSelector((state) => state.gages);
-  const categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
   const MainApp = () => {
     const navigate = useNavigate();
+    const participants = useSelector((state) => state.participants);
 
     const onStartGame = () => {
       navigate('/formulaire-participants');
@@ -33,10 +33,15 @@ function App() {
       navigate('/selection-categories');
     };
 
-    const onFinishCategories = (selectedCategories) => {
-      console.log(selectedCategories)
+    const onFinishCategories = (selectedCategories, participants) => {
       const gagesFiltres = filtrerEtMelangerGages(selectedCategories);
-      dispatch({ type: 'SET_GAGES', payload: gagesFiltres });
+    
+      // Remplacez les '$' par les noms des participants avant de les stocker dans le store
+      const gagesAvecParticipants = gagesFiltres.map((gage) =>
+        getGageTextWithParticipants(gage, participants)
+      );
+    
+      dispatch({ type: 'SET_GAGES', payload: gagesAvecParticipants });
       navigate('/jeu');
     };
 
@@ -71,7 +76,9 @@ function App() {
             path="/selection-categories"
             element={
               <SelectionCategories
-                onFinishCategories={onFinishCategories}
+                onFinishCategories={(selectedCategories) =>
+                  onFinishCategories(selectedCategories, participants)
+                }
               />
             }
           />
