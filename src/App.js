@@ -11,6 +11,7 @@ import FormulaireParticipants from './components/FormulaireParticipants/Formulai
 import SelectionCategories from './components/SelectionCategories/SelectionCategories';
 import CompteurGage from './components/CompteurGages/CompteurGages';
 import SlideGage from './components/SlideGage/SlideGage';
+import FinDeJeu from './components/FinDeJeu/FinDeJeu';
 import { filtrerEtMelangerGages, getGageTextWithParticipants } from './gages';
 import './App.css';
 
@@ -31,6 +32,10 @@ function App() {
 
     const onFinishParticipants = () => {
       navigate('/selection-categories');
+    };
+
+    const onFinishGame = () => {
+      navigate('/fin-de-jeu');
     };
 
     const onFinishCategories = (selectedCategories, participants) => {
@@ -82,17 +87,21 @@ function App() {
               />
             }
           />
-          <Route
-            path="/jeu"
-            element={
-              <div>
-                <CompteurGage tour={tour} />
-                <SlideGage
-                  gage={gages[currentGageIndex]}
-                  onNextGage={onNextGage}
-                  onPreviousGage={onPreviousGage}
-                />
-              </div>
+          <Route path="/jeu" element={
+            <div>
+              <CompteurGage tour={tour} />
+              <SlideGage
+                gage={gages[currentGageIndex]}
+                onNextGage={onNextGage}
+                onPreviousGage={onPreviousGage}
+                isFirstGage={currentGageIndex === 0}
+                isLastGage={currentGageIndex === gages.length - 1}
+                onFinishGame={onFinishGame}
+              />
+            </div>
+          }/>
+          <Route path="/fin-de-jeu" element={
+            <FinDeJeu />
             }
           />
         </Routes>

@@ -1,7 +1,14 @@
 import React from 'react';
 import './SlideGage.css';
 
-const SlideGage = ({ gage, onNextGage, onPreviousGage }) => {
+const SlideGage = ({
+  gage,
+  onNextGage,
+  onPreviousGage,
+  isFirstGage,
+  isLastGage,
+  onFinishGame,
+}) => {
 
   const renderGageText = () => {
     if (!gage) {
@@ -14,8 +21,9 @@ const SlideGage = ({ gage, onNextGage, onPreviousGage }) => {
   return (
     <div>
       <h2>{renderGageText()}</h2>
-      <button onClick={onPreviousGage}>Gage précédent</button>
-      <button onClick={onNextGage}>Gage suivant</button>
+      {!isFirstGage && <button onClick={onPreviousGage}>Gage précédent</button>}
+      {!isLastGage && <button onClick={onNextGage}>Gage suivant</button>}
+      {isLastGage && <button onClick={onFinishGame}>Terminer</button>}
     </div>
   );
 };

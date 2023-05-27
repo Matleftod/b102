@@ -30,7 +30,7 @@
   }
   
   .category-button.selected {
-    background-color: #4caf50;
+    background-color: 0;
   }
   
   .category-button:hover {
@@ -38,7 +38,7 @@
   }
   
   .finish-categories-button {
-    background-color: #4caf50;
+    background-color: #af4c4c;
     border: none;
     color: white;
     padding: 0.5rem 1rem;

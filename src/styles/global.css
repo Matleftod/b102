@@ -27,8 +27,8 @@
     margin: auto;
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(
-      hsl(158, 82%, 57%, 85%),
-      hsl(252, 82%, 57%)
+      hsla(0, 100%, 35%, 0.85),
+      hsl(0, 54%, 26%)
     );
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
