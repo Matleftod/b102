@@ -31,7 +31,9 @@
   
   .category-button.selected {
     background-color: 0;
-  }
+    background-color: green;
+
+  }  
   
   .category-button:hover {
     background-color: #45a049;

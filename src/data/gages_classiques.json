@@ -1,15 +1,602 @@
 [
-    {
-      "text": "$ doit faire 10 pompes",
-      "categorie": "classique",
-      "niveau": 1,
-      "player": true
-    },
-    {
-      "text": "$ doit imiter une vache",
-      "categorie": "classique",
-      "niveau": 1,
-      "player": true
-    }
+  {
+    "text": "$ doit imiter l'accent de l'autre joueur. Si personne ne rit, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une danse improvisée. Si c'est nul, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit citer 5 capitales du monde en 10 secondes ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit dire un secret embarrassant ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit donner son meilleur baiser à l'autre joueur... sur la joue! Si l'autre joueur trouve ça mauvais, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit tenter de toucher son nez avec sa langue ou boire 2 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire 10 pompes ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit dire à l'autre joueur ce qu'il pense vraiment de ses chaussures ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne à maquiller ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un compliment à chaque joueur ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit décrire la personne à sa droite avec un seul mot ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit chanter une chanson de son choix ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit déclarer qui est le plus beau joueur ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit dire la vérité sur ce qu'il pense de $ ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit réciter l'alphabet à l'envers en moins de 30 secondes ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit manger une cuillère de moutarde ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire la tour de la table sur une jambe ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 animaux en 'A' en moins de 10 secondes ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire le tour de la table en dansant ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une pose de yoga pendant 30 secondes ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit dire trois vérités et un mensonge. Si personne ne devine le mensonge, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une imitation de son choix. Si personne ne devine, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit échanger de place avec un autre joueur pour le reste du jeu, la personne qui refuse doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit dire un mot dans une langue étrangère et l'autre joueur doit deviner la langue. Si il ne devine pas, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit raconter son pire rendez-vous ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit dire ce qu'il préfère chez les autres joueurs ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit raconter la chose la plus embarrassante qu'il ait jamais faite ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit danser comme un poulet pendant 30 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui devra raconter une anecdote drôle. Si personne ne rit, cette personne doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit montrer sa danse la plus sexy ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir quelqu'un pour danser la macarena avec lui. La personne qui refuse boit 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit chanter l'hymne national ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit nommer 5 marques de voiture en 10 secondes. Si elle échoue, elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit nommer 3 pays commençant par la lettre 'B'. Si elle échoue, elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire rire la personne à sa gauche en 30 secondes ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit dire une blague. Si personne ne rit, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire le poirier pendant 10 secondes ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit avouer le plus gros mensonge qu'il ait jamais dit ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit imiter une célébrité choisie par le groupe. Si personne ne devine, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit chanter l'hymne national d'un autre pays. Si personne ne le reconnaît, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit échanger un vêtement avec une personne choisie par le groupe ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une déclaration d'amour à la personne à sa droite ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une scène d'un film choisi par le groupe. Si personne ne devine, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit raconter une histoire drôle. Si personne ne rit, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit dire le nom de toutes les personnes présentes dans l'ordre inverse ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une démonstration de son meilleur pas de danse ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit imiter l'animal que le groupe choisit ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit raconter la chose la plus drôle qui lui soit jamais arrivée ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit révéler qui il trouve le plus attrayant dans le groupe ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire le meilleur compliment possible à la personne à sa gauche ou boire 3 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer son sport préféré. Si personne ne devine, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer son film préféré. Si personne ne devine, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit parler dans une langue étrangère pendant 2 minutes ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit réciter une poésie ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un selfie drôle et le poster sur les médias sociaux ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une déclaration d'amour à la personne en face de lui ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit désigner la personne qu'il pense être la plus intelligente. Cette personne doit résoudre une énigme en cas d'échec elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit imiter un chanteur célèbre. Si personne ne devine, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit dire une anecdote sur chaque personne du groupe ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une scène de son livre préféré. Si personne ne devine, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un discours inspirant de 2 minutes ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit chanter une chanson choisie par le groupe ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un tour de magie. Si personne n'est impressionné, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit deviner la couleur des sous-vêtements de chaque personne. Pour chaque erreur, il doit boire 2 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit faire 20 sauts à la corde ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 animaux qui commencent par la lettre 'C' en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une imitation de la personne à sa droite ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit nommer 5 fruits en 10 secondes. Si elle échoue, elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit nommer 5 villes en 10 secondes. Si elle échoue, elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit faire 10 squats. Si elle refuse, elle doit boire boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit tenir en équilibre sur un pied pendant 1 minute. Si elle tombe, elle doit boire boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un portrait de la personne à sa droite ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un discours sur l'importance de la pizza en 2 minutes ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une blague en langue étrangère. Si personne ne rit, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 pays d'Afrique en 10 secondes ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une pose de yoga complexe pendant 1 minute ou boire 6 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit chanter une chanson de son choix en imitant une célébrité. Si personne ne devine la célébrité, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une profession choisie par le groupe. Si personne ne devine, il doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire un discours de motivation pour convaincre tout le monde de courir un marathon ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une déclaration d'amour à un objet dans la pièce ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit nommer 5 acteurs célèbres en 10 secondes. Si elle échoue, elle doit boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit montrer son talent caché ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit choisir une personne qui doit faire une imitation de lui ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire le tour de la pièce en marche arrière sans rien toucher ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 langues différentes en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit improviser une chanson sur le thème de la soirée ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 marques de voitures en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire la chaise contre un mur pendant 1 minute ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une scène d'un film célèbre. Si personne ne devine le film, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une pose de yoga pendant 1 minute sans tomber ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une chanson célèbre. Si personne ne devine la chanson, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 races de chiens en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit démontrer sa meilleure danse de breakdance ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une publicité convaincante pour un produit inventé ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 chansons des Beatles en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit mimer une scène de son film préféré. Si personne ne devine le film, il doit boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 fromages en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une déclaration passionnée sur le café ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 1,
+    "player": true
+  },
+  {
+    "text": "$ doit nommer 5 fleurs en 10 secondes ou boire 4 gorgées.",
+    "categorie": "classique",
+    "niveau": 2,
+    "player": true
+  },
+  {
+    "text": "$ doit faire une pose de fitness pendant 1 minute sans tomber ou boire 5 gorgées.",
+    "categorie": "classique",
+    "niveau": 3,
+    "player": true
+  }
 ]
-  

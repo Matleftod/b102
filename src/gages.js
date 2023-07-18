@@ -24,7 +24,7 @@ const filtrerEtMelangerGages = (categoriesSelectionnees) => {
   // Mélangez les gages filtrés
   const gagesMelanges = melangerGages(gagesFiltres);
 
-  // Sélectionnez les 30 premiers gages mélangés
+  // Sélectionnez les 50 premiers gages mélangés
   const gagesSelectionnes = gagesMelanges.slice(0, 50);
 
   return gagesSelectionnes;
