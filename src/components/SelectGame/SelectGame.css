@@ -1,27 +1,44 @@
-.SelectGame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
+.select-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
 }
 
-.game-button {
-    background-color: #fa1313;
-    border: none;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 1rem 0;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.picolade{
+  background: hsl(345deg 100% 47%);
 }
 
-.game-button:hover {
-    background-color: #45a049;
+.picolade-btn{
+  background: hsl(340deg 100% 32%);
+}
+
+.soon{
+  background: hsl(0, 0%, 57%);
+}
+
+.soon-btn{
+  background: hsl(0, 0%, 39%);
+}
+
+.pushable {
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
 }

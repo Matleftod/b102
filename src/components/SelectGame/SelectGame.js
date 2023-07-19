@@ -4,18 +4,21 @@ import './SelectGame.css';
 
 const SelectGame = ({ onStartGame }) => {
   return (
-    <div className="SelectGame">
-      <button onClick={onStartGame} className="game-button">
-        Jeu 1
+    <div className="select-game-container">
+      <button class="pushable picolade-btn" onClick={onStartGame}>
+        <span class="front picolade">
+          Picolade
+        </span>
       </button>
-      <button className="game-button">
-        Jeu 2
+      <button class="pushable soon-btn" onClick={onStartGame}>
+        <span class="front soon">
+          Soon
+        </span>
       </button>
-      <button className="game-button">
-        Jeu 3
-      </button>
-      <button className="game-button">
-        Jeu 4
+      <button class="pushable soon-btn" onClick={onStartGame}>
+        <span class="front soon">
+          Soon
+        </span>
       </button>
     </div>
   );
