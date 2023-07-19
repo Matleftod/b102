@@ -12,6 +12,7 @@ import SelectionCategories from './components/SelectionCategories/SelectionCateg
 import CompteurGage from './components/CompteurGages/CompteurGages';
 import SlideGage from './components/SlideGage/SlideGage';
 import FinDeJeu from './components/FinDeJeu/FinDeJeu';
+import SelectGame from './components/SelectGame/SelectGame';
 import { filtrerEtMelangerGages, getGageTextWithParticipants } from './gages';
 import './App.css';
 
@@ -28,6 +29,10 @@ function App() {
 
     const onStartGame = () => {
       navigate('/formulaire-participants');
+    };
+
+    const onSelectGame = () => {
+      navigate('/selection-jeu');
     };
 
     const onFinishParticipants = () => {
@@ -68,7 +73,11 @@ function App() {
           <div className="gradient"></div>
         </div>
         <Routes>
-          <Route path="/" element={<Accueil onStartGame={onStartGame} />} />
+          <Route path="/" element={<Accueil onSelectGame={onSelectGame} />} />
+          <Route
+            path="/selection-jeu"
+            element={<SelectGame onStartGame={onStartGame} />}
+          />
           <Route
             path="/formulaire-participants"
             element={
