@@ -7,4 +7,20 @@
     height: 100vh;
     width: 100vw;
 }
-  
+
+.logo_acceuil{
+    width: 35%;
+    animation: zoom 3s infinite; /* Le logo s'agrandit et rétrécit toutes les 3 secondes */
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

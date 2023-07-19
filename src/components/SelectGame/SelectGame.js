@@ -5,18 +5,18 @@ import './SelectGame.css';
 const SelectGame = ({ onStartGame }) => {
   return (
     <div className="select-game-container">
-      <button class="pushable picolade-btn" onClick={onStartGame}>
-        <span class="front picolade">
+      <button className="pushable picolade-btn" onClick={onStartGame}>
+        <span className="front picolade">
           Picolade
         </span>
       </button>
-      <button class="pushable soon-btn" onClick={onStartGame}>
-        <span class="front soon">
+      <button className="pushable soon-btn" onClick={onStartGame}>
+        <span className="front soon">
           Soon
         </span>
       </button>
-      <button class="pushable soon-btn" onClick={onStartGame}>
-        <span class="front soon">
+      <button className="pushable soon-btn" onClick={onStartGame}>
+        <span className="front soon">
           Soon
         </span>
       </button>
