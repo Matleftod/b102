@@ -28,17 +28,21 @@ const SelectionCategories = ({ onFinishCategories }) => {
       <h2>Sélectionnez les catégories</h2>
       <div className="categories-list">
         {allCategories.map((category, index) => (
-          <button
+          <button 
             key={index}
-            className={`category-button ${categories.includes(category) ? 'selected' : ''}`}
+            className={`pushable categ-btn ${categories.includes(category) ? 'selected-btn-'+category : ''}`}
             onClick={() => toggleCategory(category)}
           >
+          <span className={`front categ ${categories.includes(category) ? 'selected-'+category : ''}`}>
             {category}
-          </button>
+          </span>
+        </button>
         ))}
       </div>
-      <button onClick={handleFinishCategories} className="finish-categories-button">
-        Terminer
+      <button className='pushable terminer-btn' onClick={handleFinishCategories}>
+        <span className='front terminer'>
+          Terminer
+        </span>
       </button>
     </div>
   );

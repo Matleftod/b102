@@ -25,21 +25,33 @@ const FormulaireParticipants = ({ onFinishParticipants }) => {
     <div className="FormulaireParticipants">
       <h2>Ajoutez les participants</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Nom du participant"
-          value={participantName}
-          onChange={handleChange}
-        />
-        <button type="submit">Ajouter</button>
+        <div className='input-div'>
+          <input
+            type="text"
+            className="input-participant"
+            placeholder="Nom du participant"
+            value={participantName}
+            onChange={handleChange}
+          />
+          <span className="front input-3d">
+            
+          </span>
+        </div>
+        <button className="pushable ajouter-btn" type="submit">
+          <span className="front ajouter">
+            Ajouter
+          </span>
+        </button>
       </form>
       <ul>
         {participants.map((participant, index) => (
           <li key={index}>{participant}</li>
         ))}
       </ul>
-      <button onClick={onFinishParticipants} className="finish-participants-button">
-        Terminer
+      <button className="pushable terminer-btn" onClick={onFinishParticipants}>
+        <span className="front terminer">
+          Terminer
+        </span>
       </button>
     </div>
   );

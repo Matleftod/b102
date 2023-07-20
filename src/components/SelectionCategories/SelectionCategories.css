@@ -1,59 +1,63 @@
 .SelectionCategories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .categories-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .category-button {
-    background-color: #ccc;
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .category-button.selected {
-    background-color: 0;
-    background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
 
-  }  
-  
-  .category-button:hover {
-    background-color: #45a049;
-  }
-  
-  .finish-categories-button {
-    background-color: #af4c4c;
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 1rem 0;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .finish-categories-button:hover {
-    background-color: #45a049;
-  }  
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.finish-categories-button:hover {
+  background-color: #45a049;
+}  
+
+.categ{
+  background: hsl(0, 0%, 58%);
+  padding: 12px 22px;
+}
+
+.categ-btn{
+  background: hsl(0, 0%, 44%);
+  margin-left: 20px;
+}
+
+.selected-btn-hard{
+  background: hsl(345, 99%, 37%);
+}
+
+.selected-hard{
+  background: hsl(345deg 100% 47%);
+}
+
+.selected-btn-debile{
+  background: hsl(128, 100%, 34%);
+}
+
+.selected-debile{
+  background: hsl(130, 100%, 47%);
+}
+
+.selected-btn-classique{
+  background: hsl(185, 99%, 37%);
+}
+
+.selected-classique{
+  background: hsl(180, 100%, 47%);
+}
+
+.terminer{
+  background: hsl(0, 100%, 47%);
+  padding: 12px 22px;
+}
+
+.terminer-btn{
+  background: hsl(0, 100%, 41%);
+  margin-top: 40px;
+}
