@@ -8,14 +8,17 @@ const SlideGage = ({
   isFirstGage,
   isLastGage,
   onFinishGame,
+  handleValidate,
+  handleRefuse,
+  participants,
+  currentParticipantIndex,
 }) => {
-
   const renderGageText = () => {
     if (!gage) {
       return 'Aucun gage disponible';
     }
 
-    return gage;
+    return gage.text;
   };
 
   return (
@@ -24,6 +27,13 @@ const SlideGage = ({
       {!isFirstGage && <button onClick={onPreviousGage}>Gage précédent</button>}
       {!isLastGage && <button onClick={onNextGage}>Gage suivant</button>}
       {isLastGage && <button onClick={onFinishGame}>Terminer</button>}
+      {gage && gage.type === 'pot' && (
+        <>
+          <button onClick={handleValidate}>Valider</button>
+          <button onClick={handleRefuse}>Refuser</button>
+        </>
+      )}
+      {participants.name}
     </div>
   );
 };

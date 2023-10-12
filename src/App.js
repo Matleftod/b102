@@ -18,6 +18,8 @@ import './App.css';
 
 function App() {
   const [currentGageIndex, setCurrentGageIndex] = useState(0);
+  const [currentParticipantIndex, setCurrentParticipantIndex] = useState(0);
+
   const [tour, setTour] = useState(1);
 
   const gages = useSelector((state) => state.gages);
@@ -44,16 +46,20 @@ function App() {
     };
 
     const onFinishCategories = (selectedCategories, participants) => {
+      if (!participants || participants.length === 0) {
+        throw new Error('Les participants doivent être définis avant de commencer le jeu');
+      }
+      
       const gagesFiltres = filtrerEtMelangerGages(selectedCategories);
-    
+      
       // Remplacez les '$' par les noms des participants avant de les stocker dans le store
       const gagesAvecParticipants = gagesFiltres.map((gage) =>
         getGageTextWithParticipants(gage, participants)
       );
-    
+      
       dispatch({ type: 'SET_GAGES', payload: gagesAvecParticipants });
       navigate('/jeu');
-    };
+    };    
 
     const onNextGage = () => {
       setCurrentGageIndex(currentGageIndex + 1);
@@ -66,6 +72,30 @@ function App() {
         setTour(tour - 1);
       }
     };
+
+    const handleValidate = () => {
+      setCurrentParticipantIndex((currentParticipantIndex + 1) % participants.length);
+      // Passez au gage suivant
+      setCurrentGageIndex(currentGageIndex + 1);
+    };
+    
+    const handleRefuse = () => {
+      // Décrémentez le nombre de vies du participant actuel
+      let newParticipants = [...participants];
+      let currentParticipant = newParticipants[currentParticipantIndex];
+      currentParticipant.lives--;
+    
+      if (currentParticipant.lives <= 0) {
+        // Handle participant elimination or game end
+      }
+    
+      // Mettre à jour les participants dans le Redux store
+      dispatch({ type: 'UPDATE_PARTICIPANTS', payload: newParticipants });
+    
+      setCurrentParticipantIndex((currentParticipantIndex + 1) % participants.length);
+      // Passez au gage suivant
+      setCurrentGageIndex(currentGageIndex + 1);
+    };    
 
     return (
       <div className="App">
@@ -99,14 +129,18 @@ function App() {
           <Route path="/jeu" element={
             <div>
               <CompteurGage tour={tour} />
-              <SlideGage
-                gage={gages[currentGageIndex]}
-                onNextGage={onNextGage}
-                onPreviousGage={onPreviousGage}
-                isFirstGage={currentGageIndex === 0}
-                isLastGage={currentGageIndex === gages.length - 1}
-                onFinishGame={onFinishGame}
-              />
+                <SlideGage
+                  gage={gages[currentGageIndex]}
+                  onNextGage={onNextGage}
+                  onPreviousGage={onPreviousGage}
+                  isFirstGage={currentGageIndex === 0}
+                  isLastGage={currentGageIndex === gages.length - 1}
+                  onFinishGame={onFinishGame}
+                  handleValidate={handleValidate}
+                  handleRefuse={handleRefuse}
+                  participants={participants}
+                  currentParticipantIndex={currentParticipantIndex}
+                />
             </div>
           }/>
           <Route path="/fin-de-jeu" element={

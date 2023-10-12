@@ -16,7 +16,10 @@ const FormulaireParticipants = ({ onFinishParticipants }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (participantName.trim()) {
-      dispatch(setParticipants([...participants, participantName.trim()]));
+      // Ici, nous créons un nouvel objet pour le participant, avec le nom entré et 3 vies par défaut
+      const newParticipant = { name: participantName.trim(), lives: 2 };
+      // Ensuite, nous ajoutons ce nouvel objet participant à notre liste de participants
+      dispatch(setParticipants([...participants, newParticipant]));
       setParticipantName('');
     }
   };
@@ -45,7 +48,7 @@ const FormulaireParticipants = ({ onFinishParticipants }) => {
       </form>
       <ul>
         {participants.map((participant, index) => (
-          <li key={index}>{participant}</li>
+          <li key={index}>{participant.name} - vie : {participant.lives}</li>
         ))}
       </ul>
       <button className="pushable terminer-btn" onClick={onFinishParticipants}>
