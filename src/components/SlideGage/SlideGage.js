@@ -8,8 +8,6 @@ const SlideGage = ({
   isFirstGage,
   isLastGage,
   onFinishGame,
-  handleValidate,
-  handleRefuse,
   participants,
   currentParticipantIndex,
 }) => {
@@ -39,20 +37,6 @@ const SlideGage = ({
           Terminer
         </span>
       </button>}
-      {gage && gage.type === 'pot' && (
-        <>
-          <button className="pushable" onClick={handleValidate}>
-            <span className='front slide-btn'>
-              Valider
-            </span>
-          </button>
-          <button className="pushable" onClick={handleRefuse}>
-            <span className='front slide-btn'>
-              Refuser
-            </span>
-          </button>
-        </>
-      )}
       {participants.name}
     </div>
   );

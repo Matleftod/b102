@@ -3,13 +3,11 @@
 import gagesClassiques from './data/gages_classiques.json';
 import gagesDebiles from './data/gages_debiles.json';
 import gagesHard from './data/gages_hard.json';
-import gagesPot from './data/gages_pot.json';
 
 const gagesParCategorie = {
   classique: gagesClassiques,
   debile: gagesDebiles,
   hard: gagesHard,
-  pot: gagesPot,
 };
 
 const filtrerEtMelangerGages = (categoriesSelectionnees) => {
@@ -29,11 +27,6 @@ const filtrerEtMelangerGages = (categoriesSelectionnees) => {
   // Sélectionnez les 50 premiers gages mélangés
   const gagesSelectionnes = gagesMelanges.slice(0, 50);
 
-  for (let i = 5; i < gagesSelectionnes.length; i += 5) {
-    // Cloner l'objet gage du pot commun pour éviter des problèmes potentiels de référence
-    let gagePotClone = {...gagesParCategorie.pot[0]};
-    gagesSelectionnes.splice(i, 0, gagePotClone);
-  }
   return gagesSelectionnes;
 };
 

@@ -48,7 +48,7 @@ const FormulaireParticipants = ({ onFinishParticipants }) => {
       </form>
       <ul>
         {participants.map((participant, index) => (
-          <li key={index}>{participant.name} - vie : {participant.lives}</li>
+          <li key={index}>{participant.name} </li>
         ))}
       </ul>
       <button className="pushable terminer-btn" onClick={onFinishParticipants}>

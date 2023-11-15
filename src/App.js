@@ -71,31 +71,7 @@ function App() {
         setCurrentGageIndex(currentGageIndex - 1);
         setTour(tour - 1);
       }
-    };
-
-    const handleValidate = () => {
-      setCurrentParticipantIndex((currentParticipantIndex + 1) % participants.length);
-      // Passez au gage suivant
-      setCurrentGageIndex(currentGageIndex + 1);
-    };
-    
-    const handleRefuse = () => {
-      // Décrémentez le nombre de vies du participant actuel
-      let newParticipants = [...participants];
-      let currentParticipant = newParticipants[currentParticipantIndex];
-      currentParticipant.lives--;
-    
-      if (currentParticipant.lives <= 0) {
-        // Handle participant elimination or game end
-      }
-    
-      // Mettre à jour les participants dans le Redux store
-      dispatch({ type: 'UPDATE_PARTICIPANTS', payload: newParticipants });
-    
-      setCurrentParticipantIndex((currentParticipantIndex + 1) % participants.length);
-      // Passez au gage suivant
-      setCurrentGageIndex(currentGageIndex + 1);
-    };    
+    }; 
 
     return (
       <div className="App">
@@ -136,8 +112,6 @@ function App() {
                   isFirstGage={currentGageIndex === 0}
                   isLastGage={currentGageIndex === gages.length - 1}
                   onFinishGame={onFinishGame}
-                  handleValidate={handleValidate}
-                  handleRefuse={handleRefuse}
                   participants={participants}
                   currentParticipantIndex={currentParticipantIndex}
                 />
