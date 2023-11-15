@@ -1,5 +1,5 @@
 const initialState = {
-  participants: [], // Chaque participant est maintenant un objet avec un nom et un nombre de vies
+  participants: [],
   gages: [],
   categories: [],
 };

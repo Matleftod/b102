@@ -84,6 +84,7 @@ button {
   padding: 0;
   cursor: pointer;
   outline-offset: 4px;
+  margin: 0px 4px;
 }
 .front {
   display: block;

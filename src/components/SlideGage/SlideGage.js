@@ -24,13 +24,33 @@ const SlideGage = ({
   return (
     <div>
       <h2>{renderGageText()}</h2>
-      {!isFirstGage && <button onClick={onPreviousGage}>Gage précédent</button>}
-      {!isLastGage && <button onClick={onNextGage}>Gage suivant</button>}
-      {isLastGage && <button onClick={onFinishGame}>Terminer</button>}
+      {!isFirstGage && <button className="pushable" onClick={onPreviousGage}>
+        <span className='front slide-btn'>
+          Gage précédent
+        </span>
+      </button>}
+      {!isLastGage && <button className="pushable" onClick={onNextGage}>
+        <span className='front slide-btn'>
+          Gage suivant
+        </span>
+      </button>}
+      {isLastGage && <button className="pushable" onClick={onFinishGame}>
+        <span className='front slide-btn'>
+          Terminer
+        </span>
+      </button>}
       {gage && gage.type === 'pot' && (
         <>
-          <button onClick={handleValidate}>Valider</button>
-          <button onClick={handleRefuse}>Refuser</button>
+          <button className="pushable" onClick={handleValidate}>
+            <span className='front slide-btn'>
+              Valider
+            </span>
+          </button>
+          <button className="pushable" onClick={handleRefuse}>
+            <span className='front slide-btn'>
+              Refuser
+            </span>
+          </button>
         </>
       )}
       {participants.name}
